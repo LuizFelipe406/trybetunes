@@ -35,7 +35,10 @@ class Login extends React.Component {
     const form = (
       <div className="login-page">
         <div className="titles">
-          <span className="title-1">Trybe</span>
+          <div className="title-image-login-container">
+            <span className="title-1">Trybe</span>
+            <img className="titleImageLogin" src="https://cdn.pixabay.com/photo/2017/02/27/20/48/headphones-2104207_960_720.png" alt="Imagem de fone" />
+          </div>
           <span className="title-2">Tunes</span>
         </div>
         <form>

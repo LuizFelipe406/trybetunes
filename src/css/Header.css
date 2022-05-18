@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.userContainer {
+  align-items: center;
+  background-color: #3d405b;
+  display: flex;
+  height: 8vh;
+  justify-content: space-between;
+}
+
+.userComponent {
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  font-size: 1.2em;
+  justify-content: space-around;
+  margin-right: 8vw;
+  padding: 6px 0;
+  width: 150px;
+}
+
+.userImage {
+  width: 35px;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+  height: 8vh;
+  justify-content: center;
+}
+
+.searchLink {
+  align-items: center;
+  background-color: #81b29a;
+  color: white;
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.5em;
+  height: 100%;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.favoritesLink {
+  align-items: center;
+  background-color: #b75d69;
+  color: white;
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.5em;
+  height: 100%;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.profileLink {
+  align-items: center;
+  background-color: #a4b0f5;
+  color: white;
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.5em;
+  height: 100%;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.header-user-loading {
+  color: white;
+}
+
+.tiltes-header {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 2em;
+  margin-left: 8vw;
+}
+
+.title-header-1 {
+  font-weight: 800;
+}
+
+.titleImage {
+  margin-left: 10px;
+  width: 50px;
+}
