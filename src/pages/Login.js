@@ -41,14 +41,16 @@ class Login extends React.Component {
           </div>
           <span className="title-2">Tunes</span>
         </div>
-        <form>
+        <form className="form-login">
           <input
+            className="input-login"
             type="text"
             placeholder="Digite seu nome"
             data-testid="login-name-input"
             onChange={ this.handleChange }
           />
           <button
+            className="button-login"
             style={ { backgroundColor: userName.length < minLength ? 'red' : 'blue' } }
             type="button"
             data-testid="login-submit-button"
