@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import '../css/Search.css';
 
 class Search extends React.Component {
   state = {
@@ -14,16 +15,19 @@ class Search extends React.Component {
   render() {
     const { inputArtist } = this.state;
     return (
-      <div className="search-page" data-testid="page-search">
+      <div data-testid="page-search">
         <Header />
-        <form>
+        <form className="search-form">
           <input
+            className="search-input"
             type="text"
             data-testid="search-artist-input"
             placeholder="Nome do Artista/Banda"
             onChange={ this.handleChange }
           />
           <button
+            className="search-button"
+            style={ { backgroundColor: inputArtist.length < 2 ? 'grey' : 'blue' } }
             data-testid="search-artist-button"
             type="button"
             disabled={ (inputArtist.length < 2) }
