@@ -10,7 +10,7 @@ class MusicCard extends React.Component {
         {
           musics.map((music) => (
             <li className="music" key={ music.trackId }>
-              <p>{`${music.trackNumber} - ${music.trackName}`}</p>
+              <p>{`${music.trackName}`}</p>
               <audio
                 data-testid="audio-component"
                 src={ music.previewUrl }
