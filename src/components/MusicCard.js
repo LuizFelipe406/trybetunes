@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 class MusicCard extends React.Component {
@@ -18,18 +18,29 @@ class MusicCard extends React.Component {
   }
 
   handleChangeFavorites = (music) => {
-    this.setState({ isLoading: true }, () => {
-      addSong(music).then(() => {
-        getFavoriteSongs().then((response) => {
-          response.forEach((musicFav) => {
-            this.setState({
-              [musicFav.trackId]: true,
-              isLoading: false,
+    const { trackId } = music;
+    const { [trackId]: checked } = this.state;
+    if (checked) {
+      this.setState({ isLoading: true }, () => {
+        removeSong(music).then(() => this.setState({
+          isLoading: false,
+          [trackId]: false,
+        }));
+      });
+    } else {
+      this.setState({ isLoading: true }, () => {
+        addSong(music).then(() => {
+          getFavoriteSongs().then((response) => {
+            response.forEach((musicFav) => {
+              this.setState({
+                [musicFav.trackId]: true,
+                isLoading: false,
+              });
             });
           });
         });
       });
-    });
+    }
   }
 
   render() {
