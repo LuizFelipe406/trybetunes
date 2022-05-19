@@ -8,6 +8,15 @@ class MusicCard extends React.Component {
     isLoading: false,
   }
 
+  componentDidMount() {
+    const { favorites } = this.props;
+    favorites.forEach((music) => {
+      this.setState({
+        [music.trackId]: true,
+      });
+    });
+  }
+
   handleChangeFavorites = (music) => {
     this.setState({ isLoading: true }, () => {
       addSong(music).then(() => {
@@ -66,6 +75,7 @@ class MusicCard extends React.Component {
 
 MusicCard.propTypes = {
   musics: propTypes.arrayOf(propTypes.object.isRequired).isRequired,
+  favorites: propTypes.arrayOf(propTypes.object.isRequired).isRequired,
 };
 
 export default MusicCard;
