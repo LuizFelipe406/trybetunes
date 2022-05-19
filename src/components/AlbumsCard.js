@@ -27,16 +27,7 @@ class AlbumsCard extends React.Component {
 }
 
 AlbumsCard.propTypes = {
-  albums: propTypes.arrayOf({
-    artistId: propTypes.number.isRequired,
-    artistName: propTypes.string.isRequired,
-    collectionId: propTypes.number.isRequired,
-    collectionName: propTypes.string.isRequired,
-    collectionPrice: propTypes.number.isRequired,
-    artworkUrl100: propTypes.string.isRequired,
-    releaseDate: propTypes.string.isRequired,
-    trackCount: propTypes.number.isRequired,
-  }).isRequired,
+  albums: propTypes.arrayOf(propTypes.object.isRequired).isRequired,
 };
 
 export default AlbumsCard;
