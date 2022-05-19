@@ -1,0 +1,36 @@
+.album-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 0.3em grey;
+  display: flex;
+  flex-basis: 40%;
+  flex-flow: column wrap;
+  height: 380px;
+  margin-bottom: 50px;
+  width: 350px;
+}
+
+.album-card img {
+  border-radius: 20px 20px 0 0;
+  height: 230px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.album-card h3 {
+  color: black;
+  font-size: 1.2em;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.album-card h4 {
+  color: black;
+  font-size: 1.2em;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
