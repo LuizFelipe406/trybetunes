@@ -6,11 +6,11 @@ class MusicCard extends React.Component {
     const { musics } = this.props;
     console.log(musics);
     return (
-      <div>
+      <ul className="music-list-div">
         {
           musics.map((music) => (
-            <div className="music" key={ music.trackId }>
-              <h4>{ music.trackName }</h4>
+            <li className="music" key={ music.trackId }>
+              <p>{`${music.trackNumber} - ${music.trackName}`}</p>
               <audio
                 data-testid="audio-component"
                 src={ music.previewUrl }
@@ -21,10 +21,10 @@ class MusicCard extends React.Component {
                 <code>audio</code>
                 .
               </audio>
-            </div>
+            </li>
           ))
         }
-      </div>
+      </ul>
     );
   }
 }

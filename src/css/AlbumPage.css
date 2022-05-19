@@ -1,0 +1,50 @@
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+
+.album-info {
+  margin-right: 100px;
+}
+
+.album-info img {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.album-info h3 {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.musics-container {
+  width: 40%;
+}
+
+.music-list-div {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.music {
+  align-items: center;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  width: 100%;
+}
+
+.music p {
+  width: 300px;
+}
+
+.music audio {
+  flex-grow: 1;
+  width: 200px;
+}

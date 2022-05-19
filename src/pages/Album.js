@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
+import '../css/AlbumPage.css';
 
 class Album extends React.Component {
   state = {
@@ -25,14 +26,16 @@ class Album extends React.Component {
     return (
       <div data-testid="page-album">
         <Header />
-        <div className="album-card">
-          <img src={ musics[0].artworkUrl100 } alt="capa do album" />
-          <h3 data-testid="album-name">{ musics[0].collectionName }</h3>
-          <h4 data-testid="artist-name">{ musics[0].artistName }</h4>
-        </div>
-        <div className="musics-container">
-          <MusicCard musics={ musics.slice(1) } />
-        </div>
+        <main>
+          <div className="album-info">
+            <img src={ musics[0].artworkUrl100 } alt="capa do album" />
+            <h3 data-testid="album-name">{ musics[0].collectionName }</h3>
+            <h4 data-testid="artist-name">{ musics[0].artistName }</h4>
+          </div>
+          <div className="musics-container">
+            <MusicCard musics={ musics.slice(1) } />
+          </div>
+        </main>
       </div>
     );
   }
