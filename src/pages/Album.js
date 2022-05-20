@@ -41,7 +41,11 @@ class Album extends React.Component {
           <h4 data-testid="artist-name">{ musics[0].artistName }</h4>
         </div>
         <div className="musics-container">
-          <MusicCard favorites={ favoriteSongs } musics={ musics.slice(1) } />
+          <MusicCard
+            setLoading={ () => {} }
+            favorites={ favoriteSongs }
+            musics={ musics.slice(1) }
+          />
         </div>
       </main>
     );
