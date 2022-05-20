@@ -20,12 +20,15 @@ class MusicCard extends React.Component {
   handleChangeFavorites = (music) => {
     const { trackId } = music;
     const { [trackId]: checked } = this.state;
+    const { setLoading } = this.props;
     if (checked) {
       this.setState({ isLoading: true }, () => {
-        removeSong(music).then(() => this.setState({
-          isLoading: false,
-          [trackId]: false,
-        }));
+        removeSong(music)
+          .then(() => { setLoading(); })
+          .then(() => this.setState({
+            isLoading: false,
+            [trackId]: false,
+          }));
       });
     } else {
       this.setState({ isLoading: true }, () => {
@@ -94,8 +97,3 @@ MusicCard.propTypes = {
 };
 
 export default MusicCard;
-
-// this.setState((estadoAnterior) => ({
-//  isLoading: false,
-//  [music.trackId]: !estadoAnterior[music.trackId],
-// }));
