@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 import { getUser, updateUser } from '../services/userAPI';
 import Loading from '../components/Loading';
+import '../css/ProfileEdit.css';
 
 class ProfileEdit extends React.Component {
   state= {
@@ -69,14 +70,15 @@ class ProfileEdit extends React.Component {
     } = this.state;
     const userDefaultImage = 'https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_960_720.png';
     const mainContent = (
-      <form>
-        <div>
+      <form className="form">
+        <div className="image-input">
           <img
             width="100px"
             src={ image === '' ? userDefaultImage : image }
             alt="avatar do usuario"
           />
           <input
+            className="input"
             type="text"
             name="image"
             placeholder="insira um Link"
@@ -85,9 +87,10 @@ class ProfileEdit extends React.Component {
             onChange={ this.handleChange }
           />
         </div>
-        <label htmlFor="name-input">
+        <label htmlFor="name-input" className="input-label">
           Nome
           <input
+            className="input"
             type="text"
             name="name"
             id="name-input"
@@ -96,9 +99,10 @@ class ProfileEdit extends React.Component {
             onChange={ this.handleChange }
           />
         </label>
-        <label htmlFor="email-input">
+        <label htmlFor="email-input" className="input-label">
           Email
           <input
+            className="input"
             type="text"
             name="email"
             id="email-input"
@@ -107,9 +111,10 @@ class ProfileEdit extends React.Component {
             onChange={ this.handleChange }
           />
         </label>
-        <label htmlFor="description-input">
+        <label htmlFor="description-input" className="input-label">
           Descrição
           <input
+            className="input"
             type="textarea"
             name="description"
             id="description-input"
@@ -119,6 +124,7 @@ class ProfileEdit extends React.Component {
           />
         </label>
         <button
+          style={ { backgroundColor: isDisabled ? 'red' : 'blue' } }
           data-testid="edit-button-save"
           type="button"
           disabled={ isDisabled }

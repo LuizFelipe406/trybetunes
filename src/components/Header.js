@@ -8,6 +8,7 @@ class Header extends React.Component {
   state = {
     loading: true,
     userName: '',
+    userImage: '',
   }
 
   componentDidMount() {
@@ -16,16 +17,22 @@ class Header extends React.Component {
         this.setState({
           loading: false,
           userName: response.name,
+          userImage: response.image,
         });
       }
     });
   }
 
   render() {
-    const { loading, userName } = this.state;
+    const { loading, userName, userImage } = this.state;
+    const defaultImage = 'https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_960_720.png';
     const userComponent = (
       <div className="userComponent">
-        <img className="userImage" src="https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_960_720.png" alt="avatar de profile" />
+        <img
+          className="userImage"
+          src={ userImage === '' ? defaultImage : userImage }
+          alt="avatar de profile"
+        />
         <p>{userName}</p>
       </div>
     );

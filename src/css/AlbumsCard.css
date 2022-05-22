@@ -15,6 +15,7 @@
   height: 230px;
   margin-bottom: 10px;
   object-fit: cover;
+  width: 100%;
 }
 
 .album-card h3 {
