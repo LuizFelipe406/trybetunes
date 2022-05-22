@@ -1,0 +1,23 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 19%;
+}
+
+.user-info {
+  margin: 15px 0;
+}
+
+.image-link-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-edit-profile {
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: blue;
+  padding: 10px 12px;
+  text-decoration: none;
+}
