@@ -5,12 +5,9 @@ main {
 }
 
 
-.album-info {
-  margin-right: 100px;
-}
-
 .album-info img {
   border-radius: 10px;
+  margin: 0;
   width: 250px;
 }
 
@@ -28,6 +25,7 @@ main {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
+  width: 80%;
 }
 
 .music {
@@ -47,4 +45,57 @@ main {
 .music audio {
   flex-grow: 1;
   width: 200px;
+}
+
+@media screen and ( max-width : 768px ) {
+
+  main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .album-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .music {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .musics-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .music p {
+    margin-bottom: 1em;
+    width: fit-content;
+  }
+
+  .music audio {
+    margin-bottom: 1em;
+    width: 80%;
+  }
+
+  .music input {
+    margin-right: 0.5em;
+  }
+
+}
+
+@media screen and ( min-width : 769px ) {
+
+  .album-info {
+    margin-right: 100px;
+  }
 }

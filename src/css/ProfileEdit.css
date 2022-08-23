@@ -33,3 +33,14 @@ button {
   font-size: 1em;
   padding: 8px 20px;
 }
+
+@media screen and ( max-width : 768px ) {
+
+  .form {
+    width: 80%;
+  }
+
+  .image-input input {
+    width: 30%;
+  }
+}

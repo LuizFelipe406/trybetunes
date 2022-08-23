@@ -1,0 +1,10 @@
+@media screen and ( max-width : 768px ) {
+
+  .main-favorites {
+    width: 100%;
+  }
+
+  .favorite-title {
+    margin-bottom: 1em;
+  }
+}

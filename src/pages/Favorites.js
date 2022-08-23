@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import MusicCard from '../components/MusicCard';
+import '../css/Favorites.css';
 
 class Favorites extends React.Component {
   state = {
@@ -34,7 +35,8 @@ class Favorites extends React.Component {
   render() {
     const { isLoading, favorites } = this.state;
     const main = (
-      <main>
+      <main className="main-favorites">
+        <h1 className="favorite-title">Musicas Favoritas</h1>
         <MusicCard
           setLoading={ this.setLoadingFavorites }
           musics={ favorites }

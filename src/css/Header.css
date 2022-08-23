@@ -94,3 +94,18 @@ body {
   margin-left: 10px;
   width: 50px;
 }
+
+@media screen and ( max-width : 768px ) {
+
+  .searchLink {
+    width: 33%;
+  }
+
+  .favoritesLink {
+    width: 33%;
+  }
+
+  .profileLink {
+    width: 33%;
+  }
+}

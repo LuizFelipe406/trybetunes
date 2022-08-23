@@ -27,3 +27,10 @@ img {
   margin-right: 10px;
   width: 200px;
 }
+
+@media screen and ( max-width : 768px ) {
+
+  .profile {
+    width: 80%;
+  }
+}
